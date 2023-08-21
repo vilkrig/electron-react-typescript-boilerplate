@@ -8,7 +8,6 @@ function createWindow() {
     height: 600,
     titleBarStyle: 'hidden',
     webPreferences: {
-      // contextIsolation: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
