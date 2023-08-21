@@ -6,6 +6,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    titleBarStyle: 'hidden',
     webPreferences: {
       // contextIsolation: false,
       preload: path.join(__dirname, 'preload.js')
@@ -18,7 +19,7 @@ function createWindow() {
   } else {
     win.loadURL('http://localhost:3000/index.html');
 
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
 
     // Hot Reloading on 'node_modules/.bin/electronPath'
     require('electron-reload')(__dirname, {
